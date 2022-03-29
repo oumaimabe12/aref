@@ -6,8 +6,10 @@ use App\Models\Binya;
 use App\Models\Mat;
 use App\Models\User;
 use Maatwebsite\Excel\Concerns\ToModel;
-  
-class UsersImport implements ToModel
+use Maatwebsite\Excel\Concerns\Importable;
+use Maatwebsite\Excel\concerns\WithHeadingRow;
+
+class UsersImport implements ToModel,WithHeadingRow 
 {
     /**
     * @param array $data

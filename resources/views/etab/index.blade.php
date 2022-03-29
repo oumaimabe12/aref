@@ -39,7 +39,7 @@
                     <td>{{ $etab->CD_NETAB }}</td>
                     <td>{{ $etab->ensPrimG }}</td>
                     <td>
-                      <a href="{{ url('etab', ['etab'=>$etab->id]) }}"> 
+                      <a href="{{ route('etab.show', ['id'=>$etab->id]) }}"> 
                         <button class="btn btn-link trash-btn" type="submit"><i class="far fa-light fa-eye"></i></button>
                       </a>
                     </td>

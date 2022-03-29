@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\BesoinController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfsController;
 use App\Http\Controllers\EtabController;
@@ -11,8 +12,7 @@ use App\Http\Controllers\TakalifController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ExcelController;
 use App\Http\Controllers\BinyaController;
-
-
+use App\Http\Controllers\MatbController;
 
 
 
@@ -67,6 +67,8 @@ Route::post('/formulaire', function () {
 });
 
 Route::resource('etab', EtabController::class);
+Route::get('etab/{id}',[App\Http\Controllers\EtabController::class,'show'])->name("etab.show");
+
 Route::resource('mat', MatController::class);
 Route::resource('takalif', TakalifController::class);
 Route::resource('binya', BinyaController::class);
@@ -82,6 +84,12 @@ Route::post('/import-users',[App\Http\Controllers\UserController::class, 'upload
 Route::get('excel/view', [ExcelController::class, 'index'])->name('index');
 Route::get('excel/export', [ExcelController::class, 'export'])->name('export');
 Route::post('excel/import', [ExcelController::class, 'import'])->name('import');
+
+Route::resource('besoin', BesoinController::class);
+Route::post('besoin', [BesoinController::class, 'srch'])->name('srch');
+
+Route::resource('matb', MatbController::class);
+Route::post('matb', [MatbController::class, 'srchmt'])->name('srchmt');
 
 
 

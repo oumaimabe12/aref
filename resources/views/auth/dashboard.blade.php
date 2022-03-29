@@ -149,11 +149,14 @@
   <script src="js/plugins/smooth-scrollbar.min.js"></script>
   <script src="js/plugins/chartjs.min.js"></script>
   <script src="//cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+
   <script>
     $(document).ready( function () {
        $('.myTable').DataTable();
+       @yield('script')
     } );
   </script>
+  
   <script>
     var win = navigator.platform.indexOf('Win') > -1;
     if (win && document.querySelector('#sidenav-scrollbar')) {

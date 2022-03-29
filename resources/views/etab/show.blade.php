@@ -1,7 +1,7 @@
 @extends('auth.dashboard')
 
 @section('title')
-    Professeurs
+
 @endsection
 
 @section('content')

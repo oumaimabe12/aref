@@ -161,9 +161,9 @@
 </ul>
 @endif 
 
-      <div class="col-auto">
-        <button type="submit">Update</button>
-      </div>
+<div class="col-auto">
+  <button type="submit" class="btn btn-outline-primary">Update</button>
+</div>
    </div>
     </FORm>     
    </div>
